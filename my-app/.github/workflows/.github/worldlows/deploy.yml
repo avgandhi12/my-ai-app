@@ -27,6 +27,4 @@ uses: actions/upload-artifact@v3
 with:
 name: bufld-files
 path: build
-git add .
-git commit -m "Add GitHub Actions workflow"
-git push
+
