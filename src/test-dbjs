@@ -1,0 +1,15 @@
+javascript
+import { createClient} from '@supabase/supabase-js'
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL II process.env.SUPABASE_URL
+const supabaseKey = process.env.REACT APP SUPABASE_ANON_KEY II process.env.SUPABASE_ANON_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+II Test connection
+async function testConnectionQ {
+try {
+const { data, error} = await supabase.from('test').select('*')
+console.log('Database connected successfully!')
+console.log('Data:', data)
+console.log('Error:', error)
+} catch (err) {
+console.log('Connection test:', err.message)
+testConnection()
